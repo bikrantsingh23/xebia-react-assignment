@@ -50,18 +50,19 @@
 .text-input {
   max-width: 90%;
   width: 80%;
-  border-radius: 12px;
-  border: 1px solid #ffffff;
+  border-radius: 8px;
+  border: 1px solid #000000;
   text-align: center;
   color: white;
-  background: rgb(117, 117, 117);
+  background-color: lightgrey;
   line-height: 2.5em;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
   margin-bottom: 4%;
   outline: none;
 }
 
-::placeholder {
+.text-input::placeholder {
   color: white;
 }
 
@@ -71,7 +72,7 @@
 }
 .login-button {
   width: 22%;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid #4e4e4e;
   text-align: center;
   background: rgb(255, 255, 255);

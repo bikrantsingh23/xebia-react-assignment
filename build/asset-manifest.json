@@ -1,22 +1,27 @@
 {
   "files": {
-    "main.css": "/xebia-react-assignment/static/css/main.7cbeb96d.chunk.css",
-    "main.js": "/xebia-react-assignment/static/js/main.b27b4e7f.chunk.js",
-    "main.js.map": "/xebia-react-assignment/static/js/main.b27b4e7f.chunk.js.map",
+    "main.css": "/xebia-react-assignment/static/css/main.6d848163.chunk.css",
+    "main.js": "/xebia-react-assignment/static/js/main.124a107b.chunk.js",
+    "main.js.map": "/xebia-react-assignment/static/js/main.124a107b.chunk.js.map",
     "runtime-main.js": "/xebia-react-assignment/static/js/runtime-main.c2670432.js",
     "runtime-main.js.map": "/xebia-react-assignment/static/js/runtime-main.c2670432.js.map",
-    "static/js/2.d2787be5.chunk.js": "/xebia-react-assignment/static/js/2.d2787be5.chunk.js",
-    "static/js/2.d2787be5.chunk.js.map": "/xebia-react-assignment/static/js/2.d2787be5.chunk.js.map",
+    "static/js/2.9a4ef20b.chunk.js": "/xebia-react-assignment/static/js/2.9a4ef20b.chunk.js",
+    "static/js/2.9a4ef20b.chunk.js.map": "/xebia-react-assignment/static/js/2.9a4ef20b.chunk.js.map",
     "index.html": "/xebia-react-assignment/index.html",
-    "precache-manifest.9af3944060a60c9510b64a54de2b93de.js": "/xebia-react-assignment/precache-manifest.9af3944060a60c9510b64a54de2b93de.js",
+    "precache-manifest.4f3943120b1466e93d30107debc4cb51.js": "/xebia-react-assignment/precache-manifest.4f3943120b1466e93d30107debc4cb51.js",
     "service-worker.js": "/xebia-react-assignment/service-worker.js",
-    "static/css/main.7cbeb96d.chunk.css.map": "/xebia-react-assignment/static/css/main.7cbeb96d.chunk.css.map",
-    "static/js/2.d2787be5.chunk.js.LICENSE.txt": "/xebia-react-assignment/static/js/2.d2787be5.chunk.js.LICENSE.txt"
+    "static/css/main.6d848163.chunk.css.map": "/xebia-react-assignment/static/css/main.6d848163.chunk.css.map",
+    "static/js/2.9a4ef20b.chunk.js.LICENSE.txt": "/xebia-react-assignment/static/js/2.9a4ef20b.chunk.js.LICENSE.txt",
+    "static/media/add.e8b51382.svg": "/xebia-react-assignment/static/media/add.e8b51382.svg",
+    "static/media/cart.5fac09e0.svg": "/xebia-react-assignment/static/media/cart.5fac09e0.svg",
+    "static/media/logo.75a3c01e.svg": "/xebia-react-assignment/static/media/logo.75a3c01e.svg",
+    "static/media/reset.1c87b478.svg": "/xebia-react-assignment/static/media/reset.1c87b478.svg",
+    "static/media/user.c4d096ab.svg": "/xebia-react-assignment/static/media/user.c4d096ab.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c2670432.js",
-    "static/js/2.d2787be5.chunk.js",
-    "static/css/main.7cbeb96d.chunk.css",
-    "static/js/main.b27b4e7f.chunk.js"
+    "static/js/2.9a4ef20b.chunk.js",
+    "static/css/main.6d848163.chunk.css",
+    "static/js/main.124a107b.chunk.js"
   ]
 }
