@@ -245,9 +245,12 @@ select {
   display: grid;
   grid-template-columns: repeat(3, 32%);
   padding: 2%;
+  grid-column-gap: 2%;
   column-gap: 2%;
+  grid-row-gap: 2%;
   row-gap: 2%;
-  grid-auto-rows: 25%;
+  grid-auto-rows: 290px;
+  min-height: 410px;
 }
 
 .cateloge-main {
