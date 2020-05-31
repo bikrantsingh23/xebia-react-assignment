@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { ReactComponent as ResetIcon } from '../../images/reset.svg';
 import { connect } from 'react-redux';
 import { callFilterService } from '../../actions';
+import ColorFilter from './ColorFilter';
+import BrandFilter from './BrandFilter';
+import PriceFilter from './PriceFilter';
+import DiscountFilter from './DiscountFilter';
 
 export class FilterBar extends Component {
 
@@ -10,7 +14,6 @@ export class FilterBar extends Component {
     }
 
     render() {
-        //const { filtersData } = this.props;
         return (
             <>
                 <aside className="side-left">
@@ -24,54 +27,10 @@ export class FilterBar extends Component {
                         </div>
                     </div>
                     <div className="filter-div-bottom">
-                        <div className="filter-items">
-                            Color
-                                <div className="color-brand-div">
-                                <div className="checkbox-item">
-                                    <input type="checkbox" id="fruit1" name="fruit" value="Apple" />
-                                    <label htmlFor="fruit1">Apple</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="filter-items">
-                            Brand
-                                <div className="color-brand-div">
-                                <div className="checkbox-item">
-                                    <input type="checkbox" id="fruit1" name="fruit" value="Apple" />
-                                    <label htmlFor="fruit1">Apple</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="filter-items price-discount-div">
-                            Price
-                                <div className="range-div">
-                                <div className="dropdown-div">
-                                    <select id="minprice" name="minprice">
-                                        <option value="min">Min</option>
-                                    </select>
-                                </div>
-                                <div className="dropdown-div">
-                                    <select id="maxprice" name="maxprice">
-                                        <option value="max">Max</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="filter-items price-discount-div">
-                            Discount
-                                <div className="range-div">
-                                <div className="dropdown-div">
-                                    <select id="mindiscount" name="mindiscount">
-                                        <option value="min">Min</option>
-                                    </select>
-                                </div>
-                                <div className="dropdown-div">
-                                    <select id="maxdiscount" name="maxdiscount">
-                                        <option value="max">Max</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                        <ColorFilter />
+                        <BrandFilter />
+                        <PriceFilter />
+                        <DiscountFilter />
                     </div>
                 </aside>
             </>
@@ -82,6 +41,8 @@ export class FilterBar extends Component {
 const mapStateToProps = (state) => {
     return {
         filtersData: state.productReducer.filtersData,
+        minDiscount: state.productReducer.minDiscount,
+        maxDiscount: state.productReducer.maxDiscount,
         errMsg: state.productReducer.errMsg
     };
 };

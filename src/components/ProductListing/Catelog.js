@@ -6,9 +6,10 @@ import { connect } from 'react-redux';
 export class Catelog extends Component {
 
     componentDidMount() {
-        this.props.getProducts("");
+        this.props.getProducts("");//Call product service when page load
     }
 
+    //Add items to cart
     addToCart = (id) => {
         let arr = [];
         if (this.props.cartItems === "") {
@@ -31,7 +32,7 @@ export class Catelog extends Component {
                                 {productList.map((product) => (
                                     <div className="cateloge-main" key={product.id}>
                                         <div className="pimage-div">
-                                            <img className="pimage" src={product.image} alt="" />
+                                            <img className="pimage" src={product.image} alt={product.brand} />
                                             {product.discount > 0 ?
                                                 <div className="product-discount">
                                                     {`${product.discount}%`}
