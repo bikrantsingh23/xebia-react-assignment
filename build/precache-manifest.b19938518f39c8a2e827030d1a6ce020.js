@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "21101705ed894a4819986d8853537bbb",
+    "revision": "ba853f1915773b5ab10de8720246da12",
     "url": "/xebia-react-assignment/index.html"
   },
   {
-    "revision": "a108127d9de449ee60a6",
-    "url": "/xebia-react-assignment/static/css/main.6d848163.chunk.css"
+    "revision": "df6e72bd98ea8fdfd696",
+    "url": "/xebia-react-assignment/static/css/main.e21a8d58.chunk.css"
   },
   {
     "revision": "25aa10d5e43ea495ac3b",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/xebia-react-assignment/static/js/2.9a4ef20b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a108127d9de449ee60a6",
-    "url": "/xebia-react-assignment/static/js/main.124a107b.chunk.js"
+    "revision": "df6e72bd98ea8fdfd696",
+    "url": "/xebia-react-assignment/static/js/main.fd1db11e.chunk.js"
   },
   {
     "revision": "632ddcdb4b65d5a42b10",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1c87b478a3d15bb53f72f0ba0e0e6b06",
     "url": "/xebia-react-assignment/static/media/reset.1c87b478.svg"
+  },
+  {
+    "revision": "0f2180596cac1af1ae2c8e37332fbcfb",
+    "url": "/xebia-react-assignment/static/media/search-repair.0f218059.svg"
   },
   {
     "revision": "c4d096abe6ef07b61b9f41273d6da36e",
