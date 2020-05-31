@@ -3,8 +3,16 @@ import { ReactComponent as LogoIcon } from '../../images/logo.svg';
 import { ReactComponent as UserIcon } from '../../images/user.svg';
 import { ReactComponent as CartIcon } from '../../images/cart.svg';
 import { connect } from 'react-redux';
+import { callProductService } from '../../actions';
 
 export class Header extends Component {
+
+    //Search Product based on product name
+    searchProduct = (event) => {
+        const { value } = event.target;
+        this.props.getProducts(value);
+    }
+
     render() {
         return (
             <>
@@ -15,7 +23,8 @@ export class Header extends Component {
                         </div>
                         <div className="header-middle">
                             <input className="text-search" type="text"
-                                name="search" placeholder="Search Product" />
+                                name="search" placeholder="Search Product"
+                                onChange={this.searchProduct} />
                         </div>
                         <div className="header-right">
                             <div className="user-cart-div">
@@ -50,4 +59,10 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)(Header)
+const mapDispatchToProps = dispatch => {
+    return {
+        getProducts: (title) => dispatch(callProductService(title))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

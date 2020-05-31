@@ -1,5 +1,5 @@
 import ActionTypes from "./ActionTypes"
-import { LOGIN_URL } from "../config/ServiceUrl";
+import { LOGIN_URL, FILTERS_URL, PRODUCTS_URL } from "../config/ServiceUrl";
 import Axios from 'axios';
 
 export const userLogin = (userData) => {
@@ -18,10 +18,10 @@ export const getError = (error) => ({
     error: error
 });
 
-export const getProducts = (productsData) => {
+export const getProducts = (productList) => {
     return {
         type: ActionTypes.GET_PRODUCTS,
-        productsData: productsData
+        productList: productList
     }
 }
 
@@ -37,6 +37,32 @@ export const userLoginService = (username, password) => {
         return Axios.get(`${LOGIN_URL}?username=${username}&password=${password}`)
             .then(response => {
                 dispatch(userLogin(response.data))
+            })
+            .catch(err => {
+                dispatch(getError(err));
+            })
+    }
+}
+
+export const callFilterService = () => {
+    return (dispatch) => {
+        return Axios.get(FILTERS_URL)
+            .then(response => {
+                dispatch(getFilters(response.data))
+            })
+            .catch(err => {
+                dispatch(getError(err));
+            })
+    }
+}
+
+export const callProductService = (title) => {
+    const URL = title !== "" ? `${PRODUCTS_URL}?title=${title}` : PRODUCTS_URL;
+    return (dispatch) => {
+        dispatch(requestPosts());
+        return Axios.get(URL)
+            .then(response => {
+                dispatch(getProducts(response.data))
             })
             .catch(err => {
                 dispatch(getError(err));

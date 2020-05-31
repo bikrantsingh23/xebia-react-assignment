@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
 import { ReactComponent as ResetIcon } from '../../images/reset.svg';
+import { connect } from 'react-redux';
+import { callFilterService } from '../../actions';
 
 export class FilterBar extends Component {
+
+    componentDidMount() {
+        this.props.getFilters();
+    }
+
     render() {
+        //const { filtersData } = this.props;
         return (
             <>
                 <aside className="side-left">
@@ -71,4 +79,17 @@ export class FilterBar extends Component {
     }
 }
 
-export default FilterBar
+const mapStateToProps = (state) => {
+    return {
+        filtersData: state.productReducer.filtersData,
+        errMsg: state.productReducer.errMsg
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        getFilters: () => dispatch(callFilterService())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FilterBar)
