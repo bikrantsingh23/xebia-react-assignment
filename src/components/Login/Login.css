@@ -28,7 +28,6 @@
 }
 
 .alert-div {
-  display: none;
   justify-content: center;
   flex-direction: column;
   text-align: center;

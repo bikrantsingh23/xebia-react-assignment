@@ -5,6 +5,7 @@ import { ReactComponent as UserIcon } from '../../images/user.svg';
 import { ReactComponent as CartIcon } from '../../images/cart.svg';
 import { ReactComponent as ResetIcon } from '../../images/reset.svg';
 import { ReactComponent as AddIcon } from '../../images/add.svg';
+import { connect } from 'react-redux';
 
 export class ProductListing extends Component {
     constructor(props) {
@@ -14,6 +15,7 @@ export class ProductListing extends Component {
             product: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
         }
     }
+
     render() {
         return (
             <div className="main-div">
@@ -33,7 +35,8 @@ export class ProductListing extends Component {
                                         <UserIcon className="user-icon" />
                                     </div>
                                     <div className="usericon-text-div">
-                                        Welcome Bikrant
+                                        Welcome {this.props.userData.length > 0 ?
+                                            this.props.userData[0].fullName : ''}
                                     </div>
                                 </div>
                                 <div className="user-cart-div">
@@ -165,4 +168,11 @@ export class ProductListing extends Component {
     }
 }
 
-export default ProductListing
+const mapStateToProps = (state) => {
+    return {
+        userData: state.loginReducer.userData,
+        errMsg: state.loginReducer.errMsg
+    };
+};
+
+export default connect(mapStateToProps)(ProductListing)
