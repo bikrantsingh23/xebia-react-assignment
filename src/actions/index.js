@@ -32,6 +32,13 @@ export const getFilters = (filtersData) => {
     }
 }
 
+export function addToCart(cartItems) {
+    return {
+        type: ActionTypes.ADD_TO_CART,
+        cartItems: cartItems
+    };
+}
+
 export const userLoginService = (username, password) => {
     return (dispatch) => {
         return Axios.get(`${LOGIN_URL}?username=${username}&password=${password}`)

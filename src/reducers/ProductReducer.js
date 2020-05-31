@@ -1,6 +1,6 @@
 import ActionTypes from "../actions/ActionTypes";
 
-const INITIAL_STATE = { productList: [], filtersData: [], isLoading: false, errMsg: '' };
+const INITIAL_STATE = { productList: [], filtersData: [], isLoading: false, errMsg: '', cartItems: "" };
 
 export default function productReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
@@ -26,8 +26,12 @@ export default function productReducer(state = INITIAL_STATE, action) {
             return {
                 ...state,
                 filtersData: action.filtersData,
-                isLoading: false,
                 errMsg: ''
+            };
+        case ActionTypes.ADD_TO_CART:
+            return {
+                ...state,
+                cartItems: action.cartItems,
             };
         default:
             return state;

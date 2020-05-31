@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { ReactComponent as AddIcon } from '../../images/add.svg';
-import { callProductService } from '../../actions';
+import { callProductService, addToCart } from '../../actions';
 import { connect } from 'react-redux';
 
 export class Catelog extends Component {
@@ -9,9 +9,19 @@ export class Catelog extends Component {
         this.props.getProducts("");
     }
 
+    addToCart = (id) => {
+        let arr = [];
+        if (this.props.cartItems === "") {
+            arr.push(id);
+        } else {
+            arr = JSON.parse(this.props.cartItems);
+            arr.push(id);
+        }
+        this.props.addToCart(JSON.stringify(arr));
+    }
+
     render() {
         const { productList, isLoading } = this.props;
-
         return (
             <>
                 <aside className="side-right">
@@ -43,7 +53,7 @@ export class Catelog extends Component {
                                                     {product.brand}
                                                 </div>
                                                 <div className="padd-div">
-                                                    <div className="add-button-div">
+                                                    <div className="add-button-div" onClick={() => this.addToCart(product.id)}>
                                                         <AddIcon className="add-icon" />
                                                         <p>Add</p>
                                                     </div>
@@ -75,13 +85,15 @@ const mapStateToProps = (state) => {
     return {
         productList: state.productReducer.productList,
         isLoading: state.productReducer.isLoading,
+        cartItems: state.productReducer.cartItems,
         errMsg: state.productReducer.errMsg
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        getProducts: (title) => dispatch(callProductService(title))
+        getProducts: (title) => dispatch(callProductService(title)),
+        addToCart: (cartArr) => dispatch(addToCart(cartArr))
     }
 }
 

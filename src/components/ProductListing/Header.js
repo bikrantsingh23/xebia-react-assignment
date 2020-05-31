@@ -6,6 +6,10 @@ import { connect } from 'react-redux';
 import { callProductService } from '../../actions';
 
 export class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { count: 0 };
+    }
 
     //Search Product based on product name
     searchProduct = (event) => {
@@ -13,9 +17,23 @@ export class Header extends Component {
         this.props.getProducts(value);
     }
 
+    //Redirect to login
+    redirectToLogin = () => {
+        if (this.props.userData.length < 1) {
+            this.props.history.push("/");
+        }
+    }
+
+    //Recieve new props to add cart
+    UNSAFE_componentWillReceiveProps(nextProps) {
+        let cartArr = JSON.parse(nextProps.cartItems);
+        this.setState({ count: cartArr.length });
+    }
+
     render() {
         return (
             <>
+                {this.redirectToLogin()}
                 <header className="header-main">
                     <div className="header-inner">
                         <div className="header-left">
@@ -40,9 +58,11 @@ export class Header extends Component {
                                 <div className="icon-div">
                                     <CartIcon className="cart-icon" />
                                 </div>
-                                <div className="usericon-text-div">
-                                    1 Item
+                                {this.state.count > 0 ?
+                                    <div className="usericon-text-div">
+                                        {`${this.state.count} Item`}
                                     </div>
+                                    : null}
                             </div>
                         </div>
                     </div>
@@ -55,6 +75,7 @@ export class Header extends Component {
 const mapStateToProps = (state) => {
     return {
         userData: state.loginReducer.userData,
+        cartItems: state.productReducer.cartItems,
         errMsg: state.loginReducer.errMsg
     };
 };

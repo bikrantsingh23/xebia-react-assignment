@@ -6,12 +6,11 @@ import FilterBar from './FilterBar';
 import Catelog from './Catelog';
 
 export class ProductListing extends Component {
-
     render() {
         return (
             <div className="main-div">
                 <main className="inner-div">
-                    <Header />
+                    <Header {...this.props} />
                     <section className="section-middle">
                         <FilterBar />
                         <Catelog />
