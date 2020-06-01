@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/xebia-react-assignment/precache-manifest.9af3944060a60c9510b64a54de2b93de.js"
+  "/xebia-react-assignment/precache-manifest.d07dd3eca69e00296800591ff9f1a98e.js"
 );
 
 self.addEventListener('message', (event) => {
