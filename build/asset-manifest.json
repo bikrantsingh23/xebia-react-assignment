@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/xebia-react-assignment/static/css/main.e21a8d58.chunk.css",
-    "main.js": "/xebia-react-assignment/static/js/main.fd1db11e.chunk.js",
-    "main.js.map": "/xebia-react-assignment/static/js/main.fd1db11e.chunk.js.map",
-    "runtime-main.js": "/xebia-react-assignment/static/js/runtime-main.c2670432.js",
-    "runtime-main.js.map": "/xebia-react-assignment/static/js/runtime-main.c2670432.js.map",
-    "static/js/2.9a4ef20b.chunk.js": "/xebia-react-assignment/static/js/2.9a4ef20b.chunk.js",
-    "static/js/2.9a4ef20b.chunk.js.map": "/xebia-react-assignment/static/js/2.9a4ef20b.chunk.js.map",
-    "index.html": "/xebia-react-assignment/index.html",
-    "precache-manifest.b19938518f39c8a2e827030d1a6ce020.js": "/xebia-react-assignment/precache-manifest.b19938518f39c8a2e827030d1a6ce020.js",
-    "service-worker.js": "/xebia-react-assignment/service-worker.js",
-    "static/css/main.e21a8d58.chunk.css.map": "/xebia-react-assignment/static/css/main.e21a8d58.chunk.css.map",
-    "static/js/2.9a4ef20b.chunk.js.LICENSE.txt": "/xebia-react-assignment/static/js/2.9a4ef20b.chunk.js.LICENSE.txt",
-    "static/media/add.e8b51382.svg": "/xebia-react-assignment/static/media/add.e8b51382.svg",
-    "static/media/cart.5fac09e0.svg": "/xebia-react-assignment/static/media/cart.5fac09e0.svg",
-    "static/media/logo.75a3c01e.svg": "/xebia-react-assignment/static/media/logo.75a3c01e.svg",
-    "static/media/reset.1c87b478.svg": "/xebia-react-assignment/static/media/reset.1c87b478.svg",
-    "static/media/search-repair.0f218059.svg": "/xebia-react-assignment/static/media/search-repair.0f218059.svg",
-    "static/media/user.c4d096ab.svg": "/xebia-react-assignment/static/media/user.c4d096ab.svg"
+    "main.css": "/static/css/main.5534170c.chunk.css",
+    "main.js": "/static/js/main.91c44f36.chunk.js",
+    "main.js.map": "/static/js/main.91c44f36.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.895e666c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.895e666c.js.map",
+    "static/js/2.ee592014.chunk.js": "/static/js/2.ee592014.chunk.js",
+    "static/js/2.ee592014.chunk.js.map": "/static/js/2.ee592014.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e0c611d9d565832e94c64b92f5a7bbf6.js": "/precache-manifest.e0c611d9d565832e94c64b92f5a7bbf6.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5534170c.chunk.css.map": "/static/css/main.5534170c.chunk.css.map",
+    "static/js/2.ee592014.chunk.js.LICENSE.txt": "/static/js/2.ee592014.chunk.js.LICENSE.txt",
+    "static/media/add.e8b51382.svg": "/static/media/add.e8b51382.svg",
+    "static/media/cart.5fac09e0.svg": "/static/media/cart.5fac09e0.svg",
+    "static/media/logo.75a3c01e.svg": "/static/media/logo.75a3c01e.svg",
+    "static/media/reset.1c87b478.svg": "/static/media/reset.1c87b478.svg",
+    "static/media/search-repair.0f218059.svg": "/static/media/search-repair.0f218059.svg",
+    "static/media/user.c4d096ab.svg": "/static/media/user.c4d096ab.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c2670432.js",
-    "static/js/2.9a4ef20b.chunk.js",
-    "static/css/main.e21a8d58.chunk.css",
-    "static/js/main.fd1db11e.chunk.js"
+    "static/js/runtime-main.895e666c.js",
+    "static/js/2.ee592014.chunk.js",
+    "static/css/main.5534170c.chunk.css",
+    "static/js/main.91c44f36.chunk.js"
   ]
 }

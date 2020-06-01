@@ -5,8 +5,9 @@ import { connect } from 'react-redux';
 
 export class Catelog extends Component {
 
+    //Call product service when page load
     componentDidMount() {
-        this.props.getProducts("");//Call product service when page load
+        this.props.getProducts("");
     }
 
     //Add items to cart
@@ -45,7 +46,7 @@ export class Catelog extends Component {
                                                     {product.title}
                                                 </div>
                                                 <div className="pcolor-div">
-                                                    <p>Color</p>
+                                                    <p>{product.colour.title}</p>
                                                     <div style={{ backgroundColor: `${product.colour.color}` }} className="color-div"></div>
                                                 </div>
                                             </div>
@@ -62,7 +63,7 @@ export class Catelog extends Component {
                                             </div>
                                             <div className="ditail-inner">
                                                 <div className="price-div">
-                                                    {`${product.price.final_price}$`}
+                                                    {`Rs. ${product.price.final_price}`}
                                                 </div>
                                             </div>
                                         </div>
@@ -82,12 +83,55 @@ export class Catelog extends Component {
     }
 }
 
+//Filter product
+const filterRecord = (productData, ...filterConditions) => {
+    return productData.filter((product) => {
+
+        //Color Filter
+        if (filterConditions[0].length > 0
+            && filterConditions[0].indexOf(product.colour.title) < 0) {
+            return false;
+        }
+
+        //Brand Filter
+        if (filterConditions[1].length > 0
+            && filterConditions[1].indexOf(product.brand) < 0) {
+            return false;
+        }
+
+        //Price Filter
+        if (filterConditions[2].length > 0
+            && ((Number(product.price.final_price) < Number(filterConditions[2][0].minValue))
+                || (Number(product.price.final_price) > Number(filterConditions[2][1].maxValue)))) {
+            return false;
+        }
+
+        //Discount Filter
+        if (filterConditions[3].length > 0
+            && ((Number(product.discount) < Number(filterConditions[3][0].minValue))
+                || (Number(product.discount) > Number(filterConditions[3][1].maxValue)))) {
+            return false;
+        }
+        return true;
+    });
+}
+
 const mapStateToProps = (state) => {
     return {
-        productList: state.productReducer.productList,
         isLoading: state.productReducer.isLoading,
         cartItems: state.productReducer.cartItems,
-        errMsg: state.productReducer.errMsg
+        colorList: state.productReducer.colorList,
+        brandList: state.productReducer.brandList,
+        priceList: state.productReducer.priceList,
+        discountList: state.productReducer.discountList,
+        errMsg: state.productReducer.errMsg,
+        productList: filterRecord(
+            state.productReducer.productList,
+            state.productReducer.colorList,
+            state.productReducer.brandList,
+            state.productReducer.priceList,
+            state.productReducer.discountList
+        )
     };
 };
 

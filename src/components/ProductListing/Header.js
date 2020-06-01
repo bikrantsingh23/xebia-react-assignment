@@ -58,11 +58,9 @@ export class Header extends Component {
                                 <div className="icon-div">
                                     <CartIcon className="cart-icon" />
                                 </div>
-                                {this.state.count > 0 ?
-                                    <div className="usericon-text-div">
-                                        {`${this.state.count} Item`}
-                                    </div>
-                                    : null}
+                                <div className="usericon-text-div">
+                                    {`${this.state.count} Item`}
+                                </div>
                             </div>
                         </div>
                     </div>

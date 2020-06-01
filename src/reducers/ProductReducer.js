@@ -32,7 +32,12 @@ const INITIAL_STATE = {
         { key: '80', value: '80' },
         { key: '90', value: '90' },
         { key: '100', value: '100' }
-    ]
+    ],
+    colorList: [],
+    brandList: [],
+    priceList: [],
+    discountList: [],
+    reset: '',
 };
 
 export default function productReducer(state = INITIAL_STATE, action) {
@@ -65,6 +70,39 @@ export default function productReducer(state = INITIAL_STATE, action) {
             return {
                 ...state,
                 cartItems: action.cartItems,
+            };
+        case ActionTypes.FILTER_BY_COLOR:
+            return {
+                ...state,
+                colorList: action.colorList,
+                reset: ''
+            };
+        case ActionTypes.FILTER_BY_BRAND:
+            return {
+                ...state,
+                brandList: action.brandList,
+                reset: ''
+            };
+        case ActionTypes.FILTER_BY_PRICE:
+            return {
+                ...state,
+                priceList: action.priceList,
+                reset: ''
+            };
+        case ActionTypes.FILTER_BY_DISCOUNT:
+            return {
+                ...state,
+                discountList: action.discountList,
+                reset: ''
+            };
+        case ActionTypes.FILTER_RESET:
+            return {
+                ...state,
+                colorList: [],
+                brandList: [],
+                priceList: [],
+                discountList: [],
+                reset: 'reset',
             };
         default:
             return state;

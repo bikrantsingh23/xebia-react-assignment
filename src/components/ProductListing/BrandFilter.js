@@ -1,20 +1,37 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { filterByBrand } from '../../actions';
 
 export class BrandFilter extends Component {
+
+    //Get the list of selected brand to filter product
+    filterByBrand = (event) => {
+        let selectedBrands = [];
+        const brandDiv = document.getElementById("brandDiv");
+        const allChecks = brandDiv.getElementsByTagName("input");
+        for (var i = 0; i < allChecks.length; i++) {
+            if (allChecks[i].checked) {
+                selectedBrands.push(allChecks[i].value);
+            }
+        }
+        this.props.brandFilter(selectedBrands);
+    }
+
     render() {
         const { filtersData } = this.props;
         return (
             <>
                 <div className="filter-items">
                     Brand
-                        <div className="color-brand-div">
+                        <div id="brandDiv" className="color-brand-div">
                         {filtersData.length > 0 ?
                             <>
-                                {filtersData[0].values.map((itemBrand) => (
-                                    <div className="checkbox-item" key={itemBrand.title}>
-                                        <input type="checkbox" id={itemBrand.title} name={itemBrand.title} value={itemBrand.title} />
-                                        <label htmlFor={itemBrand.title}>{itemBrand.title}</label>
+                                {filtersData[0].values.map((itemBrand, index) => (
+                                    <div className="checkbox-item" key={`${index + 1}`}>
+                                        <input type="checkbox" id={itemBrand.value}
+                                            name={itemBrand.value} value={itemBrand.value}
+                                            onChange={this.filterByBrand} />
+                                        <label htmlFor={itemBrand.value}>{itemBrand.title}</label>
                                     </div>
                                 ))}
                             </>
@@ -32,4 +49,10 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)(BrandFilter)
+const mapDispatchToProps = dispatch => {
+    return {
+        brandFilter: (brandList) => dispatch(filterByBrand(brandList))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BrandFilter)

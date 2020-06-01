@@ -39,6 +39,40 @@ export function addToCart(cartItems) {
     };
 }
 
+export function filterByColor(colorList) {
+    return {
+        type: ActionTypes.FILTER_BY_COLOR,
+        colorList: colorList
+    };
+}
+
+export function filterByBrand(brandList) {
+    return {
+        type: ActionTypes.FILTER_BY_BRAND,
+        brandList: brandList
+    };
+}
+
+export function filterByPrice(priceList) {
+    return {
+        type: ActionTypes.FILTER_BY_PRICE,
+        priceList: priceList
+    };
+}
+
+export function filterByDiscount(discountList) {
+    return {
+        type: ActionTypes.FILTER_BY_DISCOUNT,
+        discountList: discountList
+    };
+}
+
+export function filterReset() {
+    return {
+        type: ActionTypes.FILTER_RESET
+    };
+}
+
 export const userLoginService = (username, password) => {
     return (dispatch) => {
         return Axios.get(`${LOGIN_URL}?username=${username}&password=${password}`)
