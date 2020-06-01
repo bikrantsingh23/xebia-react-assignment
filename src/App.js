@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/Login/Login'
-import ProductListing from './components/ProductListing/ProductListing'
 import PageNotFound from './components/ErrorBoundary/PageNotFound'
+
+const ProductListing = React.lazy(() => import('./components/ProductListing/ProductListing'));
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={Login} />
-          <Route path="/products" exact component={ProductListing} />
+          <Suspense fallback={<div><h2>Page Loading...</h2></div>}>
+            <Route path="/products" exact component={ProductListing} />
+          </Suspense>
           <PageNotFound />
         </Switch>
       </Router>
