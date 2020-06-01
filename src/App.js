@@ -9,15 +9,15 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Suspense fallback={<div><h2>Page Loading...</h2></div>}>
+        <Suspense fallback={<div><h2>Page Loading...</h2></div>}>
+          <Switch>
             <Route path="/" exact component={Login} />
             <Route path="/products" exact component={ProductListing} />
             <PageNotFound />
-          </Suspense>
-        </Switch>
+          </Switch>
+        </Suspense>
       </Router>
-    </div>
+    </div >
   );
 }
 
