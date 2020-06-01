@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "026000fdcb8ad773e225f7bb5a608d40",
+    "revision": "c45147235cb9749da9f3aace340d6fb9",
     "url": "/xebia-react-assignment/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/xebia-react-assignment/static/css/3.9f16ea4a.chunk.css"
   },
   {
-    "revision": "0a32810b4365ed3882df",
+    "revision": "1e995bfc1d5f92cf1378",
     "url": "/xebia-react-assignment/static/css/main.e3911298.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/xebia-react-assignment/static/js/3.10efa216.chunk.js"
   },
   {
-    "revision": "0a32810b4365ed3882df",
-    "url": "/xebia-react-assignment/static/js/main.260778cf.chunk.js"
+    "revision": "1e995bfc1d5f92cf1378",
+    "url": "/xebia-react-assignment/static/js/main.9d7c4077.chunk.js"
   },
   {
     "revision": "362821dda177ba0d58bb",

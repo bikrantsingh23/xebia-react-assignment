@@ -10,11 +10,11 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/" exact component={Login} />
           <Suspense fallback={<div><h2>Page Loading...</h2></div>}>
+            <Route path="/" exact component={Login} />
             <Route path="/products" exact component={ProductListing} />
+            <PageNotFound />
           </Suspense>
-          <PageNotFound />
         </Switch>
       </Router>
     </div>

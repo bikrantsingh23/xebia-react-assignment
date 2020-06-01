@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/xebia-react-assignment/static/css/main.e3911298.chunk.css",
-    "main.js": "/xebia-react-assignment/static/js/main.260778cf.chunk.js",
-    "main.js.map": "/xebia-react-assignment/static/js/main.260778cf.chunk.js.map",
+    "main.js": "/xebia-react-assignment/static/js/main.9d7c4077.chunk.js",
+    "main.js.map": "/xebia-react-assignment/static/js/main.9d7c4077.chunk.js.map",
     "runtime-main.js": "/xebia-react-assignment/static/js/runtime-main.1373aa84.js",
     "runtime-main.js.map": "/xebia-react-assignment/static/js/runtime-main.1373aa84.js.map",
     "static/js/2.fd9f485b.chunk.js": "/xebia-react-assignment/static/js/2.fd9f485b.chunk.js",
@@ -11,7 +11,7 @@
     "static/js/3.10efa216.chunk.js": "/xebia-react-assignment/static/js/3.10efa216.chunk.js",
     "static/js/3.10efa216.chunk.js.map": "/xebia-react-assignment/static/js/3.10efa216.chunk.js.map",
     "index.html": "/xebia-react-assignment/index.html",
-    "precache-manifest.d07dd3eca69e00296800591ff9f1a98e.js": "/xebia-react-assignment/precache-manifest.d07dd3eca69e00296800591ff9f1a98e.js",
+    "precache-manifest.08888c5424c7587516bd171eae5bb7f9.js": "/xebia-react-assignment/precache-manifest.08888c5424c7587516bd171eae5bb7f9.js",
     "service-worker.js": "/xebia-react-assignment/service-worker.js",
     "static/css/3.9f16ea4a.chunk.css.map": "/xebia-react-assignment/static/css/3.9f16ea4a.chunk.css.map",
     "static/css/main.e3911298.chunk.css.map": "/xebia-react-assignment/static/css/main.e3911298.chunk.css.map",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.1373aa84.js",
     "static/js/2.fd9f485b.chunk.js",
     "static/css/main.e3911298.chunk.css",
-    "static/js/main.260778cf.chunk.js"
+    "static/js/main.9d7c4077.chunk.js"
   ]
 }
